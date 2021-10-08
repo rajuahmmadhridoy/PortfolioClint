@@ -1,0 +1,38 @@
+
+  .myArticleInner {
+    background: #162943;
+    border-radius: 5px;
+    height: 450px;
+    transition: 1s;
+    .myArticleInnerImg {
+      height: 200px;
+      border-radius: 5px 5px 0 0;
+      padding: 10px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .myArticleContent {
+      padding: 10px;
+    }
+    .myArticleFooter {
+      padding: 10px;
+  
+      .myArticleFooterLeft {
+        p {
+          background: #4b5769;
+          padding: 5px 10px;
+          border-radius: 5px;
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  .active{
+    transition: 1s;
+    transform: scale(1.03);
+  
+  }

@@ -1,0 +1,18 @@
+.footerInner {
+  .footerTitle a {
+    color: #64ffda;
+  }
+  .footerOthers {
+    p {
+      span {
+        margin-right: 15px;
+      }
+      a {
+        background: #28a745;
+        color: #fff;
+        padding: 3px 8px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

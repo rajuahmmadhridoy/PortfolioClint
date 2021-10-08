@@ -1,0 +1,145 @@
+.homeMain {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .homeMainTitle {
+    p {
+      font-size: 40px;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #00b1bd;
+    }
+  }
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .homeMainContent {
+    ul {
+      padding: 0;
+      margin-top: 15px;
+      color: #28a745 !important;
+      li {
+        float: left;
+        list-style: unset;
+        margin-right: 30px;
+        margin-left: 20px;
+        p {
+        }
+      }
+    }
+    .homeMainContentDescription {
+      color: bule;
+    }
+    .homeMainBtn a {
+      &:first-child {
+        margin-right: 30px;
+        background: #28a745;
+        color: #fff;
+        padding: 8px 25px;
+        border-radius: 5px;
+        transition: 1s;
+        &:hover {
+          background: #218838;
+        }
+      }
+      &:last-child {
+        border: 1px solid #28a745;
+        padding: 8px 25px;
+        border-radius: 5px;
+        transition: 1s;
+        font-size: 15px;
+        color: #28a745;
+        font-weight: 700;
+        &:hover {
+          color: #fff;
+          background: #28a745;
+        }
+      }
+    }
+  }
+  img {
+    border: 5px solid #00b1bd;
+    vertical-align: middle;
+    border-radius: 0 90px 0 90px;
+    border: 2;
+  }
+}
+.active {
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+
+/* XL Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+}
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .homeMain {
+    .homeMainTitle {
+      p {
+        font-size: 35px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+    }
+    ul {
+      li {
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .homeMainContent {
+    .homeMainContentDescription {
+      font-size: 15px;
+    }
+  }
+}
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .homeMain {
+    .homeMainTitle {
+      p {
+        font-size: 32px;
+      }
+      h2{
+        font-size:35px;
+      }
+    }
+  }
+}
+
+/* Extra small Device. */
+@media (max-width: 767px) {
+}
+
+/* SM Small Device :550px. */
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+    .homeMainContent{
+      margin-top: 350px;
+      margin-bottom: 60px;
+      .homeMainTitle {
+        p{
+          font-size: 25px;
+        }
+        h2{
+          font-size: 35px;
+        }
+      }
+  }
+  }

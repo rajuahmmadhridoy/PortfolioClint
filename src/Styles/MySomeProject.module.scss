@@ -1,0 +1,104 @@
+.slideBg {
+  height: 350px;
+  overflow: hidden;
+  z-index: -1 !important;
+  img {
+    width: 100%;
+    background-position: bottom;
+  }
+}
+.titleSectionBtn {
+  &::after {
+    width: 70% !important;
+  }
+}
+.mySomeProjectContent {
+  background: #172a45;
+  margin-left: -50px;
+  height: 281px;
+  border-radius: 6px;
+  padding: 15px;
+  z-index: 10 !important;
+  ul {
+    padding: 0;
+    li {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 2px 3px;
+      background: #4b5769;
+      border-radius: 5px;
+    }
+  }
+  .myProjectLink {
+    margin-top: 100px;
+    a {
+      font-size: 20px;
+      margin-right: 15px;
+      color: #64ffda;
+    }
+  }
+}
+.active {
+  transition: 1s;
+  transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+
+/* XL Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+}
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .titleSectionBtn {
+    &::after {
+      width: 51% !important;
+    }
+  }
+
+  .slideBg {
+    height: 300px;
+  }
+  // 2ta row thakar karone aktar padding bad dile nicer row tar css korte hoooyse
+  .row {
+    padding-left: 0;
+  }
+}
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .titleSectionBtn {
+    &::after {
+      width: 57% !important;
+    }
+  }
+  .row {
+    padding-left: 0;
+  }
+  .col7 {
+    width: 82.333333%;
+  }
+  .slideBg {
+    height: 290px;
+  }
+  .mySomeProjectContent {
+    margin-left: 0;
+    height: 376px;
+  }
+}
+
+/* Extra small Device. */
+@media (max-width: 767px) {
+}
+
+/* SM Small Device :550px. */
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .slideBg {
+    height: 180px;
+  }
+  .mySomeProjectContent {
+    margin-left: 0;
+  }
+}

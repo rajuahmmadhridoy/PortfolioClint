@@ -1,0 +1,38 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contactInner {
+      margin-top:30px;
+    width: 550px;
+    height: 520px;
+    background: #172A45;
+    display: block;
+    border-radius: 5px;
+    padding: 20px 22px;
+    h2{
+        margin-bottom: 20px;
+    }
+    input {
+        margin-top: 15px;
+    }
+    textarea {
+        margin-top: 15px;
+        height: 150px;
+    }
+    input[type=submit] {
+        border: none;
+        background: #218838;
+        height: 40px;
+        border-radius: 5px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    p{
+        a{
+            text-decoration: underline;
+            color: #64F1A8;
+        }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.aboutMainInner {
+  .aboutMainImg {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      // height: auto !important;
+    }
+  }
+}
+.aboutMainSkilles {
+  .aboutMainSkillesItems {
+    span{
+      display: inline-block;
+      margin-left: 10px;
+      background: #4B5769;
+      border-radius: 5px;
+      padding: 4px 5px;
+      margin-bottom: 15px;
+    }
+    margin-bottom: 20px;
+  }
+  .aboutMainSkillesTitle{
+    margin-bottom: 15px;
+    &:after{
+      content: "";
+      width: 74px;
+      height: 2px;
+      display: block;
+      margin-top: 7px;
+      background-color: #64ffda;
+    }
+  }
+}
