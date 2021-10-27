@@ -67,7 +67,16 @@
 /* SM Small Device :550px. */
 @media only screen and (min-width: 425px) and (max-width: 767px) {
 .provideServiceInner{
-    margin-top: 350px;
 }
  
 }
+
+@media only screen and (max-width: 374px) {
+    .ProvideServiceInner {
+        .provideServiceContent{
+            h4{
+                margin-top: 0;
+            }
+        }
+    }
+  }

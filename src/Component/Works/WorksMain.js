@@ -26,17 +26,22 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 const WorksMain = () => {
-  const [active,setActive] = useState(2);
+  const [active, setActive] = useState(2);
   return (
     <section>
-      <div className="container marginTop50">
+      <div className="container marginTop40 marginSmTop0">
         <div className="row">
           <h3>My Works</h3>
           {myProject.map((data, index) => (
             <div className="col-md-4 col-sm-12">
-              <div onMouseEnter={()=>setActive(index)} className={`${style.worksMainInner} ${active == index ? style.active : ''}`}>
+              <div
+                onMouseEnter={() => setActive(index)}
+                className={`${style.worksMainInner} ${
+                  active == index ? style.active : ""
+                }`}
+              >
                 <div className={style.worksMainInnerImg}>
-                <Swiper
+                  <Swiper
                     breakpoints={{
                       // when window width is >= 320px
                       320: {
@@ -59,28 +64,34 @@ const WorksMain = () => {
                       delay: 2000,
                       disableOnInteraction: false,
                     }}
-                    pagination={{ clickable: true }}
+                    // pagination={{ clickable: true }}
                     // scrollbar={{ draggable: true }}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log("slide change")}
                   >
-                    <SwiperSlide>
-                      <img src={data.img} alt="" />
-                    </SwiperSlide>
+                    {data.images.map((imgData) => (
+                      <SwiperSlide className={style.swiperSlide}>
+                        <img src={imgData.img} alt="" />
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
                 </div>
-                <h5 className="marginTop20">{data.title}</h5>
-                <p>{data.description}</p>
-                <ul>
-                  {data.items && data.items.map((data) => <li>{data.item}</li>)}
-                </ul>
+                <div className={style.myProjectContent}>
+                  <h5 className="marginTop20">{data.title}</h5>
+                  <p>{data.description}</p>
+                  <ul>
+                    {data.items &&
+                      data.items.map((data) => <li>{data.item}</li>)}
+                  </ul>
+                </div>
                 <div className={style.myProjectLink}>
-                  <Link>
+                  <a href={data.gitLink} target="_blank">
                     <FontAwesomeIcon icon={data.gitIcon} />
-                  </Link>
-                  <Link>
+                  </a>
+                  <a href={data.liveLink} target="_blank">
+                    {" "}
                     <FontAwesomeIcon icon={data.linkIcon} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

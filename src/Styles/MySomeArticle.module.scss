@@ -34,19 +34,14 @@
     }
   }
 }
-.active{
+.active {
   transform: scale(1.03);
-
 }
-
-
 
 /* RESPONSIVE */
 
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
-
-
 }
 
 /* LG Device :992px. */
@@ -55,33 +50,54 @@
     width: 53% !important;
   }
 
-
   .mySomeArticleInner {
-   height: 470px;
+    height: 470px;
+  }
 }
 
-}
-
- 
 /* MD Device :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
   .titleSectionBtn::after {
     width: 56% !important;
   }
-  .col7{
+  .col7 {
     width: 82.333333%;
   }
 }
 
- 
 /* Extra small Device. */
 @media (max-width: 767px) {
-
-
+  .col7 {
+    width: 100%;
+  }
+  h3 {
+    font-size: 25px !important;
+    span {
+      font-size: 25px !important;
+    }
+  }
 }
- 
-/* SM Small Device :550px. */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
 
- 
+/* SM Small Device :550px. */
+@media only screen and (max-width: 424px) {
+  h3 {
+    // font-family: unset !important;
+  }
+  .titleSectionBtn {
+
+    a {
+      padding: 7px 8px !important;
+    }
+}
+}
+@media only screen and (max-width: 374px) {
+  h3 {
+    font-size: 20px !important;
+    span {
+      font-size: 20px !important;
+    }
+  }
+  .mySomeArticleInner{
+    height: 486px;
+}
 }

@@ -6,6 +6,7 @@ import NavBar from '../../Share/NavBar';
 import ProvideService from './ProvideService';
 import MySomeArticle from './MySomeArticle';
 import Footer from '../../Share/Footer';
+import Map from './Map';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <ProvideService />
             <MySomeProject />
             <MySomeArticle />
+            <Map />
             <Footer />
         </div>
     );

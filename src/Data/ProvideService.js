@@ -11,12 +11,12 @@ export const provideService = [
     },
     {
         img:webdesign,
-        title:"PSD to HTML",
-        description:"I can covert any PSD design to a responsive webpage. I use HTML, CSS, Bootstrap, Vanilla Js, React JS for it. You can see some of my works in portfolio tab in this website"
+        title:"Web Design",
+        description:"I am a Expart web designer.I can design any type web site useing Html, Css, Scss, Bootstrap, Meterial Ui, Javascript, React."
     },
     {
         img:mearnStack,
-        title:"PSD to HTML",
-        description:"I can covert any PSD design to a responsive webpage. I use HTML, CSS, Bootstrap, Vanilla Js, React JS for it. You can see some of my works in portfolio tab in this website"
+        title:"MERN Stac Web Development",
+        description:"I am a MERN Stac Web Developer.I use MongoDB database, Node.js, Express.js, for server side work."
     }
 ]

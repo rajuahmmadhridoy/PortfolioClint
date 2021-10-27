@@ -37,7 +37,8 @@ li{
 
 p{
   color: #DFEAF8;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .marginTop10{
@@ -314,8 +315,12 @@ p{
 }
 
 
-
-
+.lodder{
+  position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+}
 
 
 /* RESPONSIVE */
@@ -354,14 +359,12 @@ p{
 }
 
  
-/* Extra small Device. */
-@media (max-width: 767px) {
-
-
-}
  
 /* SM Small Device :550px. */
-@media only screen and (min-width: 425px) and (max-width: 767px) {
+@media only screen and  (max-width: 767px) {
+  .marginSmTop0{
+    margin-top: 0;
+  }
   h2{
     font-size: 30px;
   }
@@ -371,4 +374,24 @@ p{
     }
   }
  
+}
+@media only screen and (min-width: 320px) and (max-width: 424px) {
+  
+  h2{
+    font-size: 30px !important;
+  }
+  .titleSectionBtn {
+    &::after {
+      content: none !important;
+    }
+  }
+ 
+}
+
+.slider {
+  z-index: 0;
+}
+
+.info {
+  z-index: 5;
 }

@@ -1,7 +1,7 @@
 .container {
   padding: 0 30px;
   .menu {
-    span {
+    button {
       display: none;
     }
     ul {
@@ -22,6 +22,15 @@
       }
     }
   }
+}
+.activeNav {
+  z-index: 999;
+  background: #172a45;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 1s;
 }
 
 /* RESPONSIVE */
@@ -47,22 +56,82 @@
   }
 }
 
-/* Extra small Device. */
-@media (max-width: 767px) {
-}
-
 /* SM Small Device :550px. */
-@media only screen and (min-width: 425px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+ 
   .container {
+    .navLogo {
+      margin-top: 10px;
+  }
+    transition: 2s;
     .menu {
-      span {
+      button {
         display: block;
         position: relative;
         top: -35px;
       }
       ul {
         display: none !important;
+        position: fixed;
+        width: 250px;
+        height: 350px;
+        background: #172a45;
+        z-index: 11;
+        top: 0;
+        right: 0;
+        padding: 22px;
+        margin-top: 0;
+        &.active {
+          display: block !important;
+        }
+        li {
+          float: none;
+          text-align: center;
+          display: block;
+          margin-top: 4px;
+          &:first-child {
+            margin-top: 28px;
+          }
+        }
+      }
+      .nabBarBtnOpen {
+        display: block;
+        position: relative;
+        top: -38px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+      }
+      .nabBarBtnClose {
+        display: inline-block;
+        position: fixed;
+        top: 12px;
+        left: 192px;
+        z-index: 333;
+        border: 1px solid #28a745;
+        background: none;
+        color: #fff;
+        font-size: 17px;
+
+        span {
+          font-size: 17px !important;
+          margin-left: 5px;
+        }
       }
     }
+  }
+  .activeNav {
+    height: 51px;
+  }
+}
+@media only screen and (max-width: 424px) {
+  .nabBarBtnClose {
+    left: 139px !important;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .nabBarBtnClose {
+    left: 88px !important;
   }
 }

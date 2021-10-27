@@ -29,8 +29,8 @@ const MySomeProject = () => {
   const [active, setActive] = useState(null);
   const myProjectSplit = myProject.slice(0, 2);
   return (
-    <div className="container marginTop50">
-      <div className={`row paddingBottom50`}>
+    <div className="container marginTop40">
+      <div className={`row paddingBottom10`}>
         <div className={`col-md-7 ${style.col7}`}>
           <div className={`titleSection `}>
             <h3 className="title">
@@ -46,7 +46,7 @@ const MySomeProject = () => {
         {myProjectSplit.map((data, index) => (
           <div className="col-md-12 marginTop30">
             <div className="row d-flex align-items-center">
-              <div className="col-md-7">
+              <div className="col-md-7 slider">
                 <div className={style.slideBg}>
                   <Swiper
                     breakpoints={{
@@ -76,13 +76,15 @@ const MySomeProject = () => {
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log("slide change")}
                   >
-                    <SwiperSlide>
-                      <img src={data.img} alt="" />
-                    </SwiperSlide>
+                    {data.images.map((imgData) => (
+                      <SwiperSlide className={style.bgSlideImg}>
+                        <img src={imgData.img} alt="" />
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
                 </div>
               </div>
-              <div className="col-md-5">
+              <div className="col-md-5 info">
                 <div
                   onMouseEnter={() => setActive(index)}
                   className={`${style.mySomeProjectContent} ${
@@ -96,12 +98,9 @@ const MySomeProject = () => {
                       data.items.map((data) => <li>{data.item}</li>)}
                   </ul>
                   <div className={style.myProjectLink}>
-                    <Link>
-                      <FontAwesomeIcon icon={data.gitIcon} />
-                    </Link>
-                    <Link>
-                      <FontAwesomeIcon icon={data.linkIcon} />
-                    </Link>
+                    
+                      <a href={data.gitLink} target="_blank"> <FontAwesomeIcon icon={data.gitIcon} /></a>
+                      <a href={data.liveLink} target="_blank"><FontAwesomeIcon icon={data.linkIcon} /></a>
                   </div>
                 </div>
               </div>

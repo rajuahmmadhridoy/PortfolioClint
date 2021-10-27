@@ -6,12 +6,14 @@ import style from "../../Styles/AboutMain.module.scss";
 const AboutMain = () => {
   return (
     <div>
-      <div className="container marginTop50">
+      <div className="container marginTop50 marginSmTop0">
         <div className="row">
           <div className="col-md-6 col-sm-12">
             <div className={style.aboutMainInner}>
               <div className={style.aboutMainImg}>
+                <div className={style.aboutMainImgInner}>
                 <img style={{ height: "400px" }} src={personalImg} alt="" />
+                </div>
               </div>
               <div className={style.homeMainTitle}>
                 <h2 className="marginTop30">

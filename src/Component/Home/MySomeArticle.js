@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { myArticle } from "../../Data/Article";
 import style from "../../Styles/MySomeArticle.module.scss";
 const MySomeBlog = () => {
-  const [active,setActive] = useState(2);
-  const sliceMyArticle = myArticle.slice(0,3);
+  const [active, setActive] = useState(2);
+  const sliceMyArticle = myArticle.slice(0, 3);
   return (
     <section>
       <div className="container marginTop50">
@@ -25,26 +25,37 @@ const MySomeBlog = () => {
         <div className="row">
           {sliceMyArticle.map((data, index) => (
             <div className="col-md-4 col-sm-12 marginBottom30">
-              <Link>
-                <div onMouseEnter={()=>setActive(index)} className={`${style.mySomeArticleInner} ${active == index ? style.active : ''}`}>
-                  <div className={style.mySomeArticleInnerImg}>
-                  <img src={data.img} alt="" />
-                  </div>
-                  <div className={style.mySomeArticleContent}>
-                    <h4>{data.title}</h4>
-                    <p>{data.description}</p>
-                  </div>
-                  <div className={`${style.mySomeArticleFooter} d-flex justify-content-between`}>
-                    <div className={`d-flex ${style.mySomeArticleFooterLeft}`}>
-                      <p>{data.tec1}</p>
-                      {data.tec2 && <p>{data.tec2}</p>}
+              <div data-aos="fade-up">
+                <a href={data.link} target="_blank">
+                  <div
+                    onMouseEnter={() => setActive(index)}
+                    className={`${style.mySomeArticleInner} ${
+                      active == index ? style.active : ""
+                    }`}
+                  >
+                    <div className={style.mySomeArticleInnerImg}>
+                      <img src={data.img} alt="" />
                     </div>
-                    <div>
+                    <div className={style.mySomeArticleContent}>
+                      <h4>{data.title}</h4>
+                      <p>{data.description}</p>
+                    </div>
+                    <div
+                      className={`${style.mySomeArticleFooter} d-flex justify-content-between`}
+                    >
+                      <div
+                        className={`d-flex ${style.mySomeArticleFooterLeft}`}
+                      >
+                        <p>{data.tec1}</p>
+                        {data.tec2 && <p>{data.tec2}</p>}
+                      </div>
+                      <div>
                         <p>{data.date}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </a>
+              </div>
             </div>
           ))}
         </div>

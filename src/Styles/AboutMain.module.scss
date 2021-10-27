@@ -1,36 +1,75 @@
 .aboutMainInner {
   .aboutMainImg {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-    img {
-      width: 100%;
-      // height: auto !important;
+    .aboutMainImgInner {
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 5px solid #00B1BD;
+      img {
+        width: 100%;
+        object-fit: cover;
+        // height: auto !important;
+      }
     }
   }
 }
 .aboutMainSkilles {
   .aboutMainSkillesItems {
-    span{
+    span {
       display: inline-block;
       margin-left: 10px;
-      background: #4B5769;
+      background: #4b5769;
       border-radius: 5px;
       padding: 4px 5px;
       margin-bottom: 15px;
     }
     margin-bottom: 20px;
   }
-  .aboutMainSkillesTitle{
+  .aboutMainSkillesTitle {
     margin-bottom: 15px;
-    &:after{
+    &:after {
       content: "";
       width: 74px;
       height: 2px;
       display: block;
       margin-top: 7px;
       background-color: #64ffda;
+    }
+  }
+}
+
+/* Extra small Device. */
+@media (max-width: 767px) {
+  .aboutMainSkillesItems {
+    span {
+      font-size: 13px !important;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .aboutMainInner {
+    display: grid;
+    justify-items: center;
+    .aboutMainImg {
+      background: #fff;
+      width: 300px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 85px;
+      .aboutMainImgInner {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: -48px;
+        border-style: dashed;
+        border-color: #00B1BD;
+        outline-offset: -85px;
+      }
     }
   }
 }

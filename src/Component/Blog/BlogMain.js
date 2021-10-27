@@ -7,13 +7,13 @@ const BlogMain = () => {
   return (
     <section>
       <div className="container">
-        <div className="row marginTop50">
+        <div className="row marginTop40 marginSmTop0">
           <h3 className="marginBottom20">My Blog</h3>
           {myArticle.map((data, index) => (
             <div onMouseEnter={() => setActive(index)} className={`col-md-4 marginTop10 ${
               active == index ? style.active : ""
             }`}>
-              <Link>
+              <a href={data.link} target="_blank">
                 <div
                   
                   className={`${style.myArticleInner}`}
@@ -37,7 +37,7 @@ const BlogMain = () => {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
           ))}
         </div>

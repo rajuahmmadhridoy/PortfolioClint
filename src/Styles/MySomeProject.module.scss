@@ -1,10 +1,15 @@
 .slideBg {
   height: 350px;
   overflow: hidden;
-  z-index: -1 !important;
-  img {
+  .bgSlideImg {
+    overflow: hidden;
+    height: 450px;
     width: 100%;
-    background-position: bottom;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 .titleSectionBtn {
@@ -68,7 +73,7 @@
 }
 
 /* MD Device :768px. */
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .titleSectionBtn {
     &::after {
       width: 57% !important;
@@ -85,20 +90,43 @@
   }
   .mySomeProjectContent {
     margin-left: 0;
-    height: 376px;
+    height: 335px;
   }
 }
 
-/* Extra small Device. */
-@media (max-width: 767px) {
-}
-
 /* SM Small Device :550px. */
-@media only screen and (min-width: 425px) and (max-width: 767px) {
+@media only screen and(max-width: 767px) {
+    .col7 {
+      width: 100%;
+    }
+    h3 {
+      font-size: 25px !important;
+      span {
+        font-size: 25px !important;
+      }
+    }
+
   .slideBg {
     height: 180px;
   }
   .mySomeProjectContent {
     margin-left: 0;
+  }
+}
+@media only screen and(max-width: 374px) {
+
+  h3 {
+    font-size: 20px !important;
+    span {
+      font-size: 20px !important;
+    }
+  }
+  .titleSectionBtn {
+    a {
+      padding: 7px 8px !important;
+    }
+  }
+  .mySomeProjectContent {
+    height: 355px;
   }
 }
